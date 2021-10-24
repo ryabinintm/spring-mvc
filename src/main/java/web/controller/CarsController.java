@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.service.CarService;
 
 import java.util.Optional;
-import java.util.OptionalInt;
 
 @Controller
 public class CarsController {
