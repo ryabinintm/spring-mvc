@@ -4,7 +4,6 @@ import org.springframework.stereotype.Repository;
 import web.model.Car;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,14 +21,12 @@ public class CarDaoImpl implements CarDao {
     };
 
     @Override
-    public List<Car> getCars(int count) {
-        if (count == 0) {
+    public List<Car> getCars(Integer count) {
+        if (count == null) {
             return cars;
         }
         return cars.stream()
                 .limit(count)
                 .collect(Collectors.toList());
     }
-
-
 }
